@@ -70,7 +70,7 @@ const App = () => {
       <div ref={containerRef} className='' >
 
         <div id='home' className='flex min-h-dvh p-4' >
-          <div className="w-full bg-gray-200 p-5 rounded-xl columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-5 cursor-default relative pb-[70px]">
+          <div className="w-full bg-gray-200 p-5 rounded-xl columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-5 cursor-default relative pb-[70px]">
             <div className='bg-white  shadow p-4 rounded-xl break-inside-avoid' >
               <p className='text-xl text-black font-normal' >Hii,</p>
               <p className='text-5xl  font-bold bg-amber-300 w-fit p-2 text-white' >
@@ -80,7 +80,12 @@ const App = () => {
                 I’m Ayush Sharma, a fast-learning full-stack developer skilled in Laravel, React, and MySQL. I build scalable, performant applications, write clean code, and adapt quickly to new technologies—turning ideas into solid, production-ready solutions with precision, purpose, and relentless curiosity.
               </p>
             </div>
+            <ResumeCard />
 
+            <div className='my-4 text-3xl font-bold bg-black text-white p-4 rounded-xl break-inside-avoid items-center gap-3 ' >
+              Full Stack Developers
+              <p className='text-lg font-normal leading-tight' >I’m Ayush Sharma, a fast-learning full-stack developer skilled in Laravel, React, and MySQL. I build scalable, performant applications, write clean code, and adapt quickly to new technologies—turning ideas into solid, production-ready solutions with precision, purpose, and relentless curiosity.</p>
+            </div>
 
             <div className='my-4 bg-gray-800 text-white p-4 rounded-xl break-inside-avoid items-center gap-3 ' >
               <p className='font-bold' >Social Media</p>
@@ -110,13 +115,17 @@ const App = () => {
             </div>
 
             <EducationCard />
-            <ResumeCard />
             <ProjectCard project={projects.distributedTodo} />
             <GithubCard />
+            <ExperienceCard />
             <ProjectCard project={projects.resumeAnalyzer} />
             <ProjectCard project={projects.resumeAnalyzer} />
             <ProjectCard project={projects.distributedTodo} />
-            <ExperienceCard />
+            <ResumeCard />
+            {/* <div className="block my-4 bg-gradient-to-br from-green-600 to-green-500 hover:from-red-600 hover:to-red-600 duration-200 transition-all text-white p-4 rounded-xl break-inside-avoid items-center gap-3 cursor-pointer">
+              <FaFilePdf size={20} className="inline" />
+              <span className="font-semibold text-3xl text-center w-full inline-block -mt-28">Hire me !</span>
+            </div> */}
 
             <div className='my-4 bg-gray-800 text-white p-4 rounded-xl break-inside-avoid items-center gap-3 ' >
               <p className='font-bold' >Social Media</p>

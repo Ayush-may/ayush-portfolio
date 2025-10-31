@@ -33,7 +33,7 @@ export default function ExperienceCard() {
 
         {/* Status */}
         <p className="text-blue-600 text-xs mt-1 font-medium">
-          💼 Currently Working
+          Currently Working
         </p>
       </div>
     </div>

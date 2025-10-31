@@ -2,6 +2,7 @@ import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FaGithub, FaFolderOpen } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+import projectImage from '../assets/images/aedvik.png'
 
 const ProjectCard = ({ project }) => {
     return (
@@ -16,13 +17,14 @@ const ProjectCard = ({ project }) => {
             {/* Card */}
             <div className="bg-white shadow text-neutral-800 border border-gray-300 p-3 rounded-xl">
                 {/* Image */}
-                <div className="rounded-xl overflow-hidden h-[100px]">
+                {/* <div className="rounded-xl overflow-hidden h-[100px]">
                     <img
-                        src={project.image}
+                        src={projectImage}
+                        // src={project.image}
                         className="w-full h-full object-cover"
                         alt={project.title}
                     />
-                </div>
+                </div> */}
 
                 {/* Description */}
                 <p className="text-neutral-700 text-sm tracking-wide leading-[110%] mt-2">
