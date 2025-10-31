@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
             <BsThreeDotsVertical size={15} className="inline-block absolute right-2 text-gray-700 top-1" />
 
             {/* Card */}
-            <div className="text-neutral-800 border border-gray-300 p-3 rounded-xl">
+            <div className="bg-white shadow text-neutral-800 border border-gray-300 p-3 rounded-xl">
                 {/* Image */}
                 <div className="rounded-xl overflow-hidden h-[100px]">
                     <img

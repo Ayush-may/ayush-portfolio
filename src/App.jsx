@@ -67,10 +67,9 @@ const App = () => {
       <CustomCursor />
       <div ref={containerRef} className='' >
 
-        <div id='home' className='flex min-h-dvh p-3' >
-          <div className="w-full bg-white shadow columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-5 cursor-default">
-
-            <div className='border border-gray-300 p-4 rounded-xl break-inside-avoid' >
+        <div id='home' className='flex min-h-dvh p-4' >
+          <div className="w-full bg-gray-200 p-5 rounded-xl columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-5 cursor-default">
+            <div className='bg-white  shadow p-4 rounded-xl break-inside-avoid' >
               <p className='text-xl text-black font-normal' >Hii,</p>
               <p className='text-5xl  font-bold bg-amber-300 w-fit p-2 text-white' >
                 Ayush Sharma
