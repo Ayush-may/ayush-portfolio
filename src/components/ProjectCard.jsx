@@ -5,7 +5,7 @@ import { FiExternalLink } from "react-icons/fi";
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="my-2 break-inside-avoid relative">
+        <div className="my-4 break-inside-avoid relative">
             {/* Header */}
             <FaFolderOpen size={20} className="inline-block mx-2" />
             <p className="font-semibold text-sm inline-block text-neutral-700">
