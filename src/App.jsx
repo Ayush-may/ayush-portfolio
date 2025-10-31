@@ -12,6 +12,8 @@ import ProjectCard from './components/ProjectCard';
 import { projects, techStacks } from './assets';
 import EducationCard from './components/EducationCard';
 import ExperienceCard from './components/ExperienceCard';
+import ResumeCard from './components/ResumeCard';
+import GithubCard from './components/GithubCard';
 
 const App = () => {
   const containerRef = useRef(null);
@@ -68,7 +70,7 @@ const App = () => {
       <div ref={containerRef} className='' >
 
         <div id='home' className='flex min-h-dvh p-4' >
-          <div className="w-full bg-gray-200 p-5 rounded-xl columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-5 cursor-default">
+          <div className="w-full bg-gray-200 p-5 rounded-xl columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-5 cursor-default relative pb-[70px]">
             <div className='bg-white  shadow p-4 rounded-xl break-inside-avoid' >
               <p className='text-xl text-black font-normal' >Hii,</p>
               <p className='text-5xl  font-bold bg-amber-300 w-fit p-2 text-white' >
@@ -107,32 +109,10 @@ const App = () => {
               }
             </div>
 
-
-            <div className='my-4 bg-gray-800 text-white p-4 rounded-xl flex flex-col items-center break-inside-avoid gap-3'>
-              <FaGithub size={20} className='inline-block me-auto' />
-              <div className='rounded-full overflow-hidden w-[100px] h-[100px] -mt-5' >
-                <img src="https://avatars.githubusercontent.com/u/112775332?v=4" className='w-full h-full' alt="" />
-              </div>
-              <p className='text-sm text-gray-100' >@ayush-may</p>
-              <div className='flex items-center gap-2 ' >
-                <p className='p-2 px-3' >
-                  <FaCodeBranch size={20} />
-                  <span>12</span>
-                </p>
-                <p className='p-2 px-3' >
-                  <FaUserGroup size={20} />
-                  <span>12</span>
-                </p>
-                <p className='p-2 px-3' >
-                  <FaStar size={20} />
-                  <span>12</span>
-                </p>
-              </div>
-            </div>
-
-
             <EducationCard />
+            <ResumeCard />
             <ProjectCard project={projects.distributedTodo} />
+            <GithubCard />
             <ProjectCard project={projects.resumeAnalyzer} />
             <ProjectCard project={projects.resumeAnalyzer} />
             <ProjectCard project={projects.distributedTodo} />
@@ -171,6 +151,11 @@ const App = () => {
             {/* <div className='my-4 border border-gray-300 p-4 rounded-xl break-inside-avoid' >
               <CgProfile size={20} className='inline-block me-auto' />
             </div> */}
+
+            <footer className="mt-10  text-center text-sm text-gray-500 border-t border-gray-200 absolute bottom-2 left-1/2 -translate-x-1/2">
+              © 2025 <strong>Ayush Sharma</strong>
+              <span className='block' >·Built with ❤️ using React & Tailwind</span>
+            </footer>
 
           </div>
         </div>
