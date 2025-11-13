@@ -1,13 +1,5 @@
-import React, { useRef } from 'react'
-import { FaFilePdf, FaFolderOpen, FaGithub, FaUserTie } from 'react-icons/fa'
-import { IoHomeOutline, IoHomeSharp } from 'react-icons/io5'
+import React, { useEffect, useRef, useState } from 'react'
 import CustomCursor from './components/CustomCursor'
-import { motion } from "framer-motion";
-import { FaFileAlt } from "react-icons/fa";
-import { AiOutlineFileText } from 'react-icons/ai';
-import { FaCodeBranch, FaGoogle, FaLinkedin, FaStar, FaUserGroup, FaWhatsapp } from 'react-icons/fa6';
-import { CgProfile } from 'react-icons/cg';
-import { FiExternalLink } from 'react-icons/fi';
 import ProjectCard from './components/ProjectCard';
 import { projects, techStacks } from './assets';
 import EducationCard from './components/EducationCard';
@@ -15,9 +7,21 @@ import ExperienceCard from './components/ExperienceCard';
 import ResumeCard from './components/ResumeCard';
 import GithubCard from './components/GithubCard';
 import SocialMediaCard from './components/SocialMediaCard';
+import Modal from './components/Modal';
 
 const App = () => {
   const containerRef = useRef(null);
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    const alreadyShown = sessionStorage.getItem("modalShown");
+
+    if (!alreadyShown) {
+      setShowModal(true);
+      sessionStorage.setItem("modalShown", "true");
+    }
+  }, []);
+
   const getInTouch = [
     {
       name: 'Github',
@@ -67,6 +71,15 @@ const App = () => {
 
   return (
     <>
+      {showModal && <Modal onClose={() => setShowModal(false)}>
+        <p className="text-lg">
+          Before you go, please follow me on
+          <a href='https://github.com/ayush-may/' target='_blank' className="underline px-2 py-1 rounded">
+            GitHub
+          </a>.
+        </p>
+      </Modal>}
+
       <CustomCursor />
       <div ref={containerRef} className='' >
 
