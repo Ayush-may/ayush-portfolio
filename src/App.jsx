@@ -74,10 +74,10 @@ const App = () => {
           <div className="w-full bg-gray-100 p-5 rounded-xl columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-5 cursor-default relative pb-[70px]">
             <div className='bg-white  shadow p-4 rounded-xl break-inside-avoid' >
               <p className='text-xl text-black font-normal' >Hii,</p>
-              <p className='text-5xl  font-bold bg-amber-300 w-fit p-2 text-white' >
+              <p className='text-5xl font-bold bg-amber-400 w-fit p-2 text-white' >
                 Ayush Sharma
               </p>
-              <p className=' text-neutral-700 text-sm tracking-wide leading-[110%] mt-3' >
+              <p className=' text-neutral-700 tracking-wide leading-[110%] mt-3' >
                 I’m Ayush Sharma, a fast-learning full-stack developer skilled in Laravel, React, and MySQL. I build scalable, performant applications, write clean code, and adapt quickly to new technologies—turning ideas into solid, production-ready solutions with precision, purpose, and relentless curiosity.
               </p>
             </div>
@@ -89,12 +89,12 @@ const App = () => {
             </div>
 
             <SocialMediaCard />
-            
+
             <div className='bg-gray-800 text-white p-4 rounded-xl break-inside-avoid items-center gap-3 my-4' >
               <p className="font-semibold text-sm">Tech Stacks</p>
               {
                 techStacks.map(e => (<span
-                  className="bg-white text-black text-xs m-0.5 p-0.5 px-2 inline-block rounded-xl">
+                  className="bg-transparent text-white border border-white text-sm m-1 p-1 px-2 inline-block rounded-4xl">
                   {e}
                 </span>
                 ))
